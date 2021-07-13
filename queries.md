@@ -58,13 +58,20 @@ filter: {partners:{$exists:false}}
 
 <!-- Your Code Goes Here -->
 
+filter: {category_code: null}
+
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
 <!-- Your Code Goes Here -->
 
+{number_of_employees: {$gte: 100, $lt: 1000}}
+{name: 1, number_of_employees: 1, \_id: 0}
+
 ### 9. Order all the companies by their IPO price in a descending order.
 
 <!-- Your Code Goes Here -->
+
+{'ipo.valuation_amount': -1 }
 
 ### 10. Retrieve the 10 companies with most employees, order by the `number of employees`
 
